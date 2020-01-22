@@ -8,7 +8,7 @@
    <!--- Basic Page Needs
    ================================================== -->
    <meta charset="utf-8">
-	<title>Shu's blog</title>
+	<title>Shu's webapp</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
@@ -16,9 +16,9 @@
    ================================================== -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<meta property="og:title" content="Shu's blog"/>
+<meta property="og:title" content="Shu's webapp"/>
 <meta property="og:image" content="https://i.imgur.com/8bFm0MM.png?1"/>
-<meta property="og:description" content="My data science blog"/>
+<meta property="og:description" content="My webapp at Insight"/>
 <meta property="og:url" content="https://shusblog.dev/" />
 	<!-- CSS
     ================================================== -->
@@ -46,10 +46,6 @@
 
          <div class="twelve columns">
 
-            <div class="logo">
-               <a href="blog:home"><img alt="" src="images/logo.png"></a>
-            </div>
-
             <nav id="nav-wrap">
 
                <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
@@ -57,10 +53,7 @@
 
                <ul id="nav" class="nav">
 
-	               <li class="current"><a href="blog:home">Home</a></li>
-                   <li><a href="blog:index">Blogs</a></li>
-                   <li><a href="blog:projects">Projects</a></li>
-	               <li><a href="blog:about">About</a></li>
+	               <li class="current"><a href="index.html">Home</a></li>
                    <li><a href="images/Shu Liao.pdf">Resume</a></li>
 
                </ul> <!-- end #nav -->
@@ -80,14 +73,22 @@
       <div class="row">
 
          <div class="ten columns centered text-center">
-            <h1>Welcome to my blog!</h1>
+            <h1>Steam Discount Predictor</h1>
 
-            <p>In this blog, I share my notes on math/physics/data science, problems I found interesting to me, and my projects on physics and data science problems. </p>
+            <p>Tell us the game you want to buy, we tell you when to buy.</p>
          </div>
 
       </div>
 
    </div> <!-- Page Title End-->
+
+   <div class="page-content">
+      <h5>Game name:</h5>
+      <form role="search" method="get" id="searchform" action="/search/">
+      <input class="text-search" type="text" name="q" required onfocus="if (this.value === 'Search here...') { this.value = ''; }" onblur="if(this.value === '') { this.value = 'Search here...'; }" value="Search here...">
+      <input type="submit" class="submit-search" value="submit">
+    </form>
+   </div>
 
    <footer>
 
@@ -95,12 +96,6 @@
 
          <div class="twelve columns">
 
-            <ul class="footer-nav">
-					<li><a href="blog:home">Home</a></li>
-              	<li><a href="#">Blogs</a></li>
-              	<li><a href="#">Projects</a></li>
-              	<li><a href="#">About</a></li>
-			   </ul>
 
             <ul class="footer-social">
                <li><a href="https://www.linkedin.com/in/shu-liao-68b234152/"><i class="fa fa-linkedin"></i></a></li>
