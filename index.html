@@ -83,12 +83,15 @@
    </div> <!-- Page Title End-->
 
    <div class="page-content">
-      <h5>Game name:</h5>
-      <form role="search" method="get" id="searchform" action="/search/">
+
+      <form role="search" method="get" id="searchform" action="##">
       <input class="text-search" type="text" name="q" required onfocus="if (this.value === 'Search here...') { this.value = ''; }" onblur="if(this.value === '') { this.value = 'Search here...'; }" value="Search here...">
-      <input type="submit" class="submit-search" value="submit">
+      <input type="submit" class="submit-search" value="submit" onclick="get_prediction()">
     </form>
    </div>
+   <p id="result">
+      fdf
+   </p>
 
    <footer>
 
@@ -124,6 +127,7 @@
    <script src="js/doubletaptogo.js"></script>
    <script src="js/init.js"></script>
    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+   <script src="js/predictor.js"></script>
 
 </body>
 
