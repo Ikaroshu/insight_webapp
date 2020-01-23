@@ -1,5 +1,8 @@
-function get_prediction() {
-    $.ajax(
+$(function () {
+    $('form').on('submit', function (event) {
+    // using this page stop being refreshing 
+    event.preventDefault();
+      $.ajax(
         {
             type: "GET",//方法类型
             dataType: "json",//预期服务器返回的数据类型
@@ -13,5 +16,6 @@ function get_prediction() {
                 alert("Some thing is wrong!");    
            }    
         }
-    )
-}
+    );
+    });
+  });
