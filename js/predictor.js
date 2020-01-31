@@ -13,7 +13,7 @@ $(function () {
                 if (!result.success) {
                   document.getElementById("result").innerHTML=result.reason;
                 } else {
-                  document.getElementById("steamlink").innerHTML="steam link: "+"<a href="+"'https://store.steampowered.com/app/"+result.appid+"' target='_blank'>"+result.game+"</a>";
+                  document.getElementById("steamlink").innerHTML="Steam link: "+"<a href="+"'https://store.steampowered.com/app/"+result.appid+"' target='_blank'>"+result.game+"</a>";
                   var t = [];
                   for (var i = 0; i < result.res_week.length; i++) {
                     t.push('Distribution of each category of discount (if discounted):<br>'+
