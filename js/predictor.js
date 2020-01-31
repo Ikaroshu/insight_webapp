@@ -13,6 +13,7 @@ $(function () {
                 if (!result.success) {
                   document.getElementById("result").innerHTML=result.reason;
                 } else {
+                  document.getElementById("steamlink").innerHTML="steam link: "+"<a href="+"'https://store.steampowered.com/app/"+result.appid+"' target='_blank'>"+result.game+"</a>";
                   var t = [];
                   for (var i = 0; i < result.res_week.length; i++) {
                     t.push('Distribution of each category of discount (if discounted):<br>'+
@@ -32,7 +33,7 @@ $(function () {
                   var data = [trace1];
                   
                   var layout = {
-                    title: 'game: ' + result.game + '<br>Probability of discount in the following weeks<br>'+'hover on the bar to show details',
+                    title: 'Game: ' + result.game + '<br>Probability of discount in the following weeks<br>'+'Hover on the bar to show details',
                     font:{
                       family: 'Raleway, sans-serif'
                     },
