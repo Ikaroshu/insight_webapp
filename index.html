@@ -28,7 +28,8 @@
 
    <!-- Script
    ================================================== -->
-	<script src="js/modernizr.js"></script>
+   <script src="js/modernizr.js"></script>
+   <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
 
    <!-- Favicons
 	================================================== -->
@@ -85,12 +86,21 @@
    <div class="page-content">
 
       <form role="search" id="searchform" action="">
-      <input class="text-search" type="text" name="appid" required onfocus="if (this.value === 'Search here...') { this.value = ''; }" onblur="if(this.value === '') { this.value = 10; }" value="Search here...">
+         Steam app id:<br>
+      <input class="text-search" type="number" name="appid">
+      <br>
+      How long are you willing to wait?<br>
+      <input class="text-search" type="number" name="weeks">
+      <br><br>
       <input type="submit" class="submit-search" value="submit">
     </form>
    </div>
-   <p id="result" class="text-center">
-   </p>
+   <div class="text-center">
+      <p id="result" class="text-center plotres">
+
+      </p>
+   </div>
+   
 
    <footer>
 

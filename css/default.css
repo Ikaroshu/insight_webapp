@@ -819,5 +819,14 @@ pre {
 
 form { 
    margin: 0 auto; 
-   width:250px;
+   width:500px;
    }
+
+.plotres {
+   align-content: center;
+   width: 80%;
+}
+
+.svg-container {
+   align-content: center;
+}
