@@ -551,7 +551,7 @@ select {
    font-size: 15px;
    line-height: 24px;
 	color: #647373;
-	background: #D3D9D9;
+	background: rgb(255, 255, 255);
 
    -moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
@@ -818,7 +818,9 @@ pre {
 }
 
 form { 
-   margin: 0 auto; 
+   align-content: center;
+   margin-left: auto;
+   margin-right: auto;
    width:500px;
    }
 
@@ -831,4 +833,10 @@ form {
 
 .svg-container {
    align-content: center;
+}
+
+.makecenter {
+   align-content: center;
+   margin-left: auto;
+   margin-right: auto;
 }
