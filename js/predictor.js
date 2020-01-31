@@ -7,7 +7,7 @@ $(function () {
             type: "GET",
             dataType: "json",
             async: false,
-            url: "http://44.231.250.246/api",//url
+            url: "https://99dittcacj.execute-api.us-west-2.amazonaws.com/ec2gateway/api",//url
             data: $('form').serialize(),
             success: function(result) {
                 if (!result.success) {
