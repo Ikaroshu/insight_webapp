@@ -22,9 +22,10 @@ $(function () {
                   } else if (result.mostlikely == 3) {
                     ds = "50%~75% discount";
                   } else {
-                    ds = "70%~100% discount";
+                    ds = "75%~100% discount";
                   }
                   if (result.suggestion) {
+                    var save = 
                     document.getElementById("suggestion").innerHTML="Suggest to buy at "+result.idx+" weeks from now, most likely to have "+ds;
                   } else {
                     document.getElementById("suggestion").innerHTML="Oops, it seems there won't be good chance to have sales, suggest to buy it now."
@@ -32,10 +33,10 @@ $(function () {
                   var t = [];
                   for (var i = 0; i < result.res_week.length; i++) {
                     t.push('Distribution of each category of discount (if discounted):<br>'+
-                    '10%~25% discount: '+ (result.discount_distri[i][0]*100).toFixed(0) + '%<br>'+
-                    '25%~50% discount: '+ (result.discount_distri[i][1]*100).toFixed(0) + '%<br>'+
-                    '50%~75% discount: '+ (result.discount_distri[i][2]*100).toFixed(0) + '%<br>' +
-                    '70%~100% discount: '+ (result.discount_distri[i][3]*100).toFixed(0) + '%<br>')
+                    '10~25% off: '+ (result.discount_distri[i][0]*100).toFixed(0) + '%<br>'+
+                    '25~50% off: '+ (result.discount_distri[i][1]*100).toFixed(0) + '%<br>'+
+                    '50~75% off: '+ (result.discount_distri[i][2]*100).toFixed(0) + '%<br>' +
+                    '75~100% off: '+ (result.discount_distri[i][3]*100).toFixed(0) + '%<br>')
                   }
                   var trace1 = {
                     x: result.res_week,
@@ -48,7 +49,7 @@ $(function () {
                   var data = [trace1];
                   
                   var layout = {
-                    title: 'Game: ' + result.game + '<br>Probability of discount in the following weeks<br>'+'Hover on the bar to show details',
+                    title: 'Probability of discount in the following weeks',
                     font:{
                       family: 'Raleway, sans-serif'
                     },
